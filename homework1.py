@@ -26,11 +26,7 @@
 #     60 -> 10  40  10
 
 quantity = int(input('Общее количество сделанных журавликов: '))
-if quantity/2 % 2 != 0:
-    katya = int(quantity/2 +1)
-    parni = int(katya/2)
-else:
-    katya = int(quantity/2)
-    parni = int(katya/2)
+parni = int(quantity/6)
+katya = int(parni*4)
 
 print(f'Из {quantity} журавликов Катя сделала {katya}, а ребята по {parni} журавликов')
