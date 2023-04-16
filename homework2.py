@@ -5,7 +5,23 @@
 # одной и той же стороной. Выведите минимальное количество монет,
 # которые нужно перевернуть
 
-
+# import random
+# n = int(input('Введите количество монеток: '))
+# coins = []
+# for i in range(n):
+#     coins.append(random.randint(0,1))   
+# print(coins)
+# coins.sort()
+# print(coins)
+# count = 0
+# for i in coins:
+#     if i == 0:
+#         count+=1
+# if count > n - count:
+#     print(f' Переверните {n-count} монет лежащих вверх гербом')
+# else:
+#     print(f' Переверните {count} монет лежащих вверх решкой')
+    
 
 
 # Задача 12:
@@ -15,8 +31,23 @@
 # делает две подсказки. Он называет сумму этих чисел
 # S и их произведение P. Помогите Кате отгадать задуманные Петей числа.
 
-
+# s = int(input('Введите первое число: '))
+# p = int(input('Введите второе число: '))
+# for x in range(0,1001):
+#     for y in range(0,1001):
+#         if x + y == s and x * y == p:
+#             print(x, y)
+    
 
 
 # Задача 14:
 # Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+# number = int(input('Введите число: '))
+# numbers = 0
+# degree = []
+# for i in range(0, number):
+#     numbers = 2**i
+#     if numbers <= number:
+#         degree.append(numbers)
+# print(*degree, sep=', ')
