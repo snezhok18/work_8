@@ -7,7 +7,24 @@
 # 1 2 3 4 5
 # 3
 # -> 1
+import random
 
+n = int(input('Введите число злементов'))
+x = int(input('Введите число для поиска'))
+number = []
+count = 0
+for i in range(n):
+    number.append(random.randint(0, 10))
+print(number)
+if x in number:
+    print(f'Число {x} есть в списке')
+    for i in number:
+        if i == x:
+            count +=1
+    print(f'Число {x} встречается в списке {count} раз(а)')
+
+else:
+    print(f'Числа {x} нет в списке')
 
 
 # Задача 18: Требуется найти в массиве A[1..N] самый близкий по
