@@ -80,43 +80,44 @@
 # Вывод:
 # 12
 
-you_word = (input('Введите слово на английском или русском: '))
-you_word_up = list(you_word.upper())
+# you_word = (input('Введите слово на английском или русском: '))
+# you_word_up = list(you_word.upper())
 
-print(you_word)
-print(you_word_up)
+# print(you_word_up)
 
-scoring = {
-1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R',
-    'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'],
-2: ['D', 'G', 
-    'Д', 'К', 'Л', 'М', 'П', 'У'], 
-3: ['B', 'C', 'M', 'P',
-    'Б', 'Г', 'Ё', 'Ь', 'Я'], 
-4: ['F', 'H', 'V', 'W', 'Y', 
-    'Й', 'Ы'],
-5: ['K',
-    'Ж', 'З', 'Х', 'Ц', 'Ч'],
-8: ['J', 'X',
-    'Ш', 'Э', 'Ю' ],
-10: ['Q', 'Z',
-     'Ф', 'Щ', 'Ъ']
-}
-summ = 0
-for i in you_word_up:
-    if i in scoring.get(1):
-        summ += 1
-    elif i in scoring.get(2):
-        summ += 2
-    elif i in scoring.get(3):
-        summ += 3
-    elif i in scoring.get(4):
-        summ += 4
-    elif i in scoring.get(5):
-        summ += 5
-    elif i in scoring.get(8):
-        summ += 8
-    elif i in scoring.get(10):
-        summ += 10
-print(summ)
+# scoring = {
+# 1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R',
+#     'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'],
+# 2: ['D', 'G', 
+#     'Д', 'К', 'Л', 'М', 'П', 'У'], 
+# 3: ['B', 'C', 'M', 'P',
+#     'Б', 'Г', 'Ё', 'Ь', 'Я'], 
+# 4: ['F', 'H', 'V', 'W', 'Y', 
+#     'Й', 'Ы'],
+# 5: ['K',
+#     'Ж', 'З', 'Х', 'Ц', 'Ч'],
+# 8: ['J', 'X',
+#     'Ш', 'Э', 'Ю' ],
+# 10: ['Q', 'Z',
+#      'Ф', 'Щ', 'Ъ']
+# }
+
+# summ = 0
+# for i in you_word_up:
+#     if i in scoring.get(1):
+#         summ += 1
+#     elif i in scoring.get(2):
+#         summ += 2
+#     elif i in scoring.get(3):
+#         summ += 3
+#     elif i in scoring.get(4):
+#         summ += 4
+#     elif i in scoring.get(5):
+#         summ += 5
+#     elif i in scoring.get(8):
+#         summ += 8
+#     elif i in scoring.get(10):
+#         summ += 10
+
+# print(F'Слово {you_word} заработало {summ} очков!')
 
