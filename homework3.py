@@ -37,21 +37,20 @@
 # 1 2 3 4 5
 # 6
 # -> 5
-import random
+# import random
 
-amount_numbers_list = int(input('Введите количество элементов: '))
-find_number = int(input('Введите число для поиска: '))
+# amount_numbers_list = int(input('Введите количество элементов: '))
+# find_number = int(input('Введите число для поиска: '))
 
-numbers_list = []
-for i in range(amount_numbers_list):
-    numbers_list.append(random.randint(0, 10))
-print(numbers_list)
-if find_number in numbers_list:
-    position_number = numbers_list.index(find_number)+1
-    print(f'Число справа от {find_number} стоит на позиции {position_number}')
-else:
-    print(f'Числа {find_number} нет в списке.')
-
+# numbers_list = []
+# for i in range(amount_numbers_list):
+#     numbers_list.append(random.randint(0, 10))
+# print(numbers_list)
+# if find_number in numbers_list:
+#     position_number = numbers_list.index(find_number)+1
+#     print(f'Число справа от {find_number} стоит на позиции {position_number}')
+# else:
+#     print(f'Числа {find_number} нет в списке.')
 
 
 # Задача 20: В настольной игре Скрабл (Scrabble) каждая буква имеет
@@ -80,3 +79,44 @@ else:
 # ноутбук
 # Вывод:
 # 12
+
+you_word = (input('Введите слово на английском или русском: '))
+you_word_up = list(you_word.upper())
+
+print(you_word)
+print(you_word_up)
+
+scoring = {
+1: ['A', 'E', 'I', 'O', 'U', 'L', 'N', 'S', 'T', 'R',
+    'А', 'В', 'Е', 'И', 'Н', 'О', 'Р', 'С', 'Т'],
+2: ['D', 'G', 
+    'Д', 'К', 'Л', 'М', 'П', 'У'], 
+3: ['B', 'C', 'M', 'P',
+    'Б', 'Г', 'Ё', 'Ь', 'Я'], 
+4: ['F', 'H', 'V', 'W', 'Y', 
+    'Й', 'Ы'],
+5: ['K',
+    'Ж', 'З', 'Х', 'Ц', 'Ч'],
+8: ['J', 'X',
+    'Ш', 'Э', 'Ю' ],
+10: ['Q', 'Z',
+     'Ф', 'Щ', 'Ъ']
+}
+summ = 0
+for i in you_word_up:
+    if i in scoring.get(1):
+        summ += 1
+    elif i in scoring.get(2):
+        summ += 2
+    elif i in scoring.get(3):
+        summ += 3
+    elif i in scoring.get(4):
+        summ += 4
+    elif i in scoring.get(5):
+        summ += 5
+    elif i in scoring.get(8):
+        summ += 8
+    elif i in scoring.get(10):
+        summ += 10
+print(summ)
+
